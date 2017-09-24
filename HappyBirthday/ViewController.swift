@@ -7,12 +7,28 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    @IBAction func toNeonBtn(_ sender: Any) {
+        audioPlayer.stop()
+    }
+    var audioPlayer:AVAudioPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        do{
+            let audioPath = Bundle.main.path(forResource: "Birds_01", ofType: "aif")
+            try audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
+        }
+
+        catch{
+            print(error)
+        }
+        audioPlayer.play()
+        
     }
 
     override func didReceiveMemoryWarning() {
