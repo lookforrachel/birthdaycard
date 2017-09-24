@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */; };
+		5D11EEDF1F77FE9100ADE81F /* HappyBirthdaay_K_HB.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */; };
+		5D11EEE01F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */; };
+		5D11EEE11F77FE9100ADE81F /* HappyBirthdaay_N_CH.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EEDA1F77FE9100ADE81F /* HappyBirthdaay_N_CH.png */; };
+		5D11EEE21F77FE9100ADE81F /* HappyBirthdaay_N_HB.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EEDB1F77FE9100ADE81F /* HappyBirthdaay_N_HB.jpg */; };
+		5D11EEE31F77FE9100ADE81F /* HappyBirthdaay_N_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EEDC1F77FE9100ADE81F /* HappyBirthdaay_N_BG.jpg */; };
+		5D11EEE41F77FE9100ADE81F /* HappyBirthdaay_K_BG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EEDD1F77FE9100ADE81F /* HappyBirthdaay_K_BG.jpg */; };
 		5D31711E1F7768F200596D4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D31711D1F7768F200596D4A /* AppDelegate.swift */; };
 		5D3171201F7768F200596D4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D31711F1F7768F200596D4A /* ViewController.swift */; };
 		5D3171231F7768F200596D4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3171211F7768F200596D4A /* Main.storyboard */; };
@@ -22,6 +29,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_CH.png; sourceTree = "<group>"; };
+		5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_HB.png; sourceTree = "<group>"; };
+		5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyBirthdaay_K__BG_F.jpg; sourceTree = "<group>"; };
+		5D11EEDA1F77FE9100ADE81F /* HappyBirthdaay_N_CH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_N_CH.png; sourceTree = "<group>"; };
+		5D11EEDB1F77FE9100ADE81F /* HappyBirthdaay_N_HB.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyBirthdaay_N_HB.jpg; sourceTree = "<group>"; };
+		5D11EEDC1F77FE9100ADE81F /* HappyBirthdaay_N_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyBirthdaay_N_BG.jpg; sourceTree = "<group>"; };
+		5D11EEDD1F77FE9100ADE81F /* HappyBirthdaay_K_BG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyBirthdaay_K_BG.jpg; sourceTree = "<group>"; };
 		5D31711A1F7768F200596D4A /* HappyBirthday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyBirthday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D31711D1F7768F200596D4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D31711F1F7768F200596D4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +63,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5D11EED61F77FE5300ADE81F /* Graphic Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */,
+				5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */,
+				5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */,
+				5D11EEDA1F77FE9100ADE81F /* HappyBirthdaay_N_CH.png */,
+				5D11EEDB1F77FE9100ADE81F /* HappyBirthdaay_N_HB.jpg */,
+				5D11EEDC1F77FE9100ADE81F /* HappyBirthdaay_N_BG.jpg */,
+				5D11EEDD1F77FE9100ADE81F /* HappyBirthdaay_K_BG.jpg */,
+				5D31712F1F77797100596D4A /* HappyBirthdaay_Kitsch.jpg */,
+				5D3171301F77797100596D4A /* HappyBirthdaay_Neon2.jpg */,
+				5D3171331F777A7200596D4A /* HappyBirthdaay_K.jpg */,
+				5D3171341F777A7200596D4A /* HappyBirthdaay_N.jpg */,
+			);
+			name = "Graphic Assets";
+			sourceTree = "<group>";
+		};
 		5D3171111F7768F200596D4A = {
 			isa = PBXGroup;
 			children = (
@@ -72,10 +104,7 @@
 				5D31711F1F7768F200596D4A /* ViewController.swift */,
 				5D31713C1F7788FF00596D4A /* NeonViewController.swift */,
 				5D3171211F7768F200596D4A /* Main.storyboard */,
-				5D31712F1F77797100596D4A /* HappyBirthdaay_Kitsch.jpg */,
-				5D3171301F77797100596D4A /* HappyBirthdaay_Neon2.jpg */,
-				5D3171331F777A7200596D4A /* HappyBirthdaay_K.jpg */,
-				5D3171341F777A7200596D4A /* HappyBirthdaay_N.jpg */,
+				5D11EED61F77FE5300ADE81F /* Graphic Assets */,
 				5D3171381F77822400596D4A /* Music */,
 				5D3171241F7768F200596D4A /* Assets.xcassets */,
 				5D3171261F7768F200596D4A /* LaunchScreen.storyboard */,
@@ -155,12 +184,19 @@
 			files = (
 				5D3171391F77834B00596D4A /* Birds_01.aif in Resources */,
 				5D3171281F7768F200596D4A /* LaunchScreen.storyboard in Resources */,
+				5D11EEE41F77FE9100ADE81F /* HappyBirthdaay_K_BG.jpg in Resources */,
 				5D3171361F777A7200596D4A /* HappyBirthdaay_N.jpg in Resources */,
 				5D3171251F7768F200596D4A /* Assets.xcassets in Resources */,
+				5D11EEE31F77FE9100ADE81F /* HappyBirthdaay_N_BG.jpg in Resources */,
 				5D3171321F77797100596D4A /* HappyBirthdaay_Neon2.jpg in Resources */,
+				5D11EEE01F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg in Resources */,
+				5D11EEDF1F77FE9100ADE81F /* HappyBirthdaay_K_HB.png in Resources */,
 				5D3171231F7768F200596D4A /* Main.storyboard in Resources */,
 				5D3171311F77797100596D4A /* HappyBirthdaay_Kitsch.jpg in Resources */,
 				5D31713B1F77885600596D4A /* Who Likes to Party.mp3 in Resources */,
+				5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */,
+				5D11EEE11F77FE9100ADE81F /* HappyBirthdaay_N_CH.png in Resources */,
+				5D11EEE21F77FE9100ADE81F /* HappyBirthdaay_N_HB.jpg in Resources */,
 				5D3171351F777A7200596D4A /* HappyBirthdaay_K.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +376,7 @@
 				5D31712E1F7768F200596D4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

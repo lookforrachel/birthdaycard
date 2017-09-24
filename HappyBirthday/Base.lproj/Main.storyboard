@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,15 +22,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HappyBirthdaay_K.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9EC-Kj-WVG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HappyBirthdaay_K_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ENa-xe-Aa5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYA-Rn-GXS">
-                                <rect key="frame" x="156" y="356" width="60" height="56"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="HappyBirthdaay_K_HB.png" translatesAutoresizingMaskIntoConstraints="NO" id="s6a-u7-mfj">
+                                <rect key="frame" x="-84" y="189" width="542" height="289"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="QhA-1C-Ngt"/>
+                                    <constraint firstAttribute="width" constant="542" id="22R-L2-7gd"/>
+                                    <constraint firstAttribute="height" constant="289" id="HyS-Hc-xPE"/>
                                 </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYA-Rn-GXS">
+                                <rect key="frame" x="157" y="345" width="60" height="53"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
                                 <state key="normal" title="🎂"/>
                                 <connections>
@@ -37,12 +42,23 @@
                                     <segue destination="K5T-DK-MPF" kind="show" id="gY5-1H-TMF"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="HappyBirthdaay_K_CH.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tfh-03-3Ez">
+                                <rect key="frame" x="-84" y="227" width="542" height="289"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="542" id="jWQ-w5-ebG"/>
+                                    <constraint firstAttribute="height" constant="289" id="pLw-XO-68j"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="EYA-Rn-GXS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="336" id="feh-gs-phT"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EYA-Rn-GXS" secondAttribute="bottom" constant="255" id="hl0-uK-h9T"/>
-                            <constraint firstItem="EYA-Rn-GXS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="156" id="hyd-F4-dyC"/>
+                            <constraint firstItem="Tfh-03-3Ez" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1bb-js-rO2"/>
+                            <constraint firstItem="EYA-Rn-GXS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7N5-xe-0Ka"/>
+                            <constraint firstItem="Tfh-03-3Ez" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CNm-OR-klS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s6a-u7-mfj" secondAttribute="trailing" constant="341" id="P3s-3i-c9h"/>
+                            <constraint firstItem="s6a-u7-mfj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="chk-cy-ePV"/>
+                            <constraint firstItem="EYA-Rn-GXS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lWt-gt-o2m"/>
+                            <constraint firstItem="s6a-u7-mfj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="we6-er-M2O"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -62,8 +78,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="HappyBirthdaay_N.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lAP-pV-8pe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="HappyBirthdaay_N_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lAP-pV-8pe">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HappyBirthdaay_N_HB.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JlS-eo-ggu">
+                                <rect key="frame" x="-84" y="189" width="542" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="HappyBirthdaay_N_CH.png" translatesAutoresizingMaskIntoConstraints="NO" id="o3e-NV-QaK">
+                                <rect key="frame" x="-84" y="232" width="542" height="289"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAS-zv-IvD">
                                 <rect key="frame" x="156" y="350" width="62" height="53"/>
@@ -93,7 +117,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="HappyBirthdaay_K.jpg" width="2975" height="1799"/>
-        <image name="HappyBirthdaay_N.jpg" width="2975" height="1799"/>
+        <image name="HappyBirthdaay_K_BG.jpg" width="2975" height="1799"/>
+        <image name="HappyBirthdaay_K_CH.png" width="2975" height="1799"/>
+        <image name="HappyBirthdaay_K_HB.png" width="2975" height="1799"/>
+        <image name="HappyBirthdaay_N_BG.jpg" width="2975" height="1799"/>
+        <image name="HappyBirthdaay_N_CH.png" width="2975" height="1799"/>
+        <image name="HappyBirthdaay_N_HB.jpg" width="2975" height="1799"/>
     </resources>
 </document>
