@@ -39,6 +39,13 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBirthdaay_K_CH.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tfh-03-3Ez">
                                 <rect key="frame" x="-84" y="227" width="542" height="289"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="659681-200.png" translatesAutoresizingMaskIntoConstraints="NO" id="oWN-ib-6TY">
+                                <rect key="frame" x="214" y="352" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="35" id="HUb-mr-dcR"/>
+                                    <constraint firstAttribute="height" constant="35" id="XT9-qP-qVL"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -52,12 +59,17 @@
                             <constraint firstItem="s6a-u7-mfj" firstAttribute="centerY" secondItem="ENa-xe-Aa5" secondAttribute="centerY" id="T4Q-DX-0pT"/>
                             <constraint firstAttribute="trailing" secondItem="ENa-xe-Aa5" secondAttribute="trailing" id="TUg-Bc-1gP"/>
                             <constraint firstItem="s6a-u7-mfj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-84" id="Wap-FA-muc"/>
+                            <constraint firstItem="oWN-ib-6TY" firstAttribute="top" secondItem="EYA-Rn-GXS" secondAttribute="bottom" constant="-46" id="XJ4-53-GIK"/>
+                            <constraint firstItem="oWN-ib-6TY" firstAttribute="leading" secondItem="EYA-Rn-GXS" secondAttribute="trailing" constant="8" id="ZKd-U7-c4V"/>
                             <constraint firstItem="EYA-Rn-GXS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lWt-gt-o2m"/>
                             <constraint firstItem="Tfh-03-3Ez" firstAttribute="leading" secondItem="s6a-u7-mfj" secondAttribute="leading" id="qvZ-rP-gFU"/>
                             <constraint firstItem="Tfh-03-3Ez" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="207" id="rHe-1r-cM2"/>
                             <constraint firstItem="s6a-u7-mfj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rph-eL-PvU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="arrow" destination="oWN-ib-6TY" id="oGF-CN-3pD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -120,6 +132,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="659681-200.png" width="200" height="200"/>
         <image name="HappyBirthdaay_K_BG.jpg" width="2975" height="1799"/>
         <image name="HappyBirthdaay_K_CH.png" width="2975" height="1799"/>
         <image name="HappyBirthdaay_K_HB.png" width="2975" height="1799"/>

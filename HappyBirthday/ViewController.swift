@@ -11,6 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     
+    @IBOutlet weak var arrow: UIImageView!
     @IBAction func toNeonBtn(_ sender: Any) {
         audioPlayer.stop()
     }
@@ -30,15 +31,40 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         }
         audioPlayer.play()
         
+        
+        
     }
 
+    func beginArrowAnimation(){
+       UIView.animateKeyframes(withDuration: 1.0, delay: 0.0, options: [.autoreverse,.repeat], animations: {
+        
+            UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1.0, animations: {
+                self.arrow.layer.frame.origin.x+=10.0
+            })
+        
+       }, completion: nil)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        let image = arrow.image?.withRenderingMode(.alwaysTemplate)
+        arrow.image = image
+        arrow.tintColor = UIColor.init(red: 236/255, green: 0/255, blue: 140/255, alpha: 1.0)
+        
+        
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        beginArrowAnimation()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return FadeAnimator()
+        return Transitions.fade.initialiseTranstion()
     }
 
 }

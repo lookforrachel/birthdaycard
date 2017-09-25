@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D1361A71F796E200085AD6F /* 659681-200.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1361A61F796E110085AD6F /* 659681-200.png */; };
 		3DC480681F7947520091AADB /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC480671F7947520091AADB /* Animator.swift */; };
 		5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */; };
 		5D11EEDF1F77FE9100ADE81F /* HappyBirthdaay_K_HB.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D1361A61F796E110085AD6F /* 659681-200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "659681-200.png"; path = "/Users/josmange/Documents/dev/sandbox/birthdaycard/HappyBirthday/659681-200.png"; sourceTree = "<absolute>"; };
 		3DC480671F7947520091AADB /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_CH.png; sourceTree = "<group>"; };
 		5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_HB.png; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 		5D11EED61F77FE5300ADE81F /* Graphic Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3D1361A61F796E110085AD6F /* 659681-200.png */,
 				5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */,
 				5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */,
 				5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */,
@@ -157,7 +160,7 @@
 				TargetAttributes = {
 					5D3171191F7768F200596D4A = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 3C42F7N9CQ;
+						DevelopmentTeam = WCX6WW7JPG;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -198,6 +201,7 @@
 				5D3171311F77797100596D4A /* HappyBirthdaay_Kitsch.jpg in Resources */,
 				5D31713B1F77885600596D4A /* Who Likes to Party.mp3 in Resources */,
 				5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */,
+				3D1361A71F796E200085AD6F /* 659681-200.png in Resources */,
 				5D11EEE11F77FE9100ADE81F /* HappyBirthdaay_N_CH.png in Resources */,
 				5D11EEE21F77FE9100ADE81F /* HappyBirthdaay_N_HB.jpg in Resources */,
 				5D3171351F777A7200596D4A /* HappyBirthdaay_K.jpg in Resources */,
@@ -339,10 +343,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3C42F7N9CQ;
+				DEVELOPMENT_TEAM = WCX6WW7JPG;
 				INFOPLIST_FILE = HappyBirthday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jossy.HappyBirthday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.langland.HappyBirthday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -352,10 +356,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3C42F7N9CQ;
+				DEVELOPMENT_TEAM = WCX6WW7JPG;
 				INFOPLIST_FILE = HappyBirthday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jossy.HappyBirthday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.langland.HappyBirthday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

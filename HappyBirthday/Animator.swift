@@ -8,6 +8,31 @@
 
 import UIKit
 
+enum Transitions {
+    case fade
+    case instant
+    
+    func initialiseTranstion()->UIViewControllerAnimatedTransitioning{
+        switch self{
+        case .fade:
+            return FadeAnimator()
+        case .instant:
+            return InstantTransition()
+        }
+        
+        
+    }
+    
+}
+
+class InstantTransition:FadeAnimator{
+    
+    override func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.0
+    }
+    
+}
+
 class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {

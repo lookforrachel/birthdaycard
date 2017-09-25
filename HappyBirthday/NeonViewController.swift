@@ -38,7 +38,7 @@ class NeonViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return FadeAnimator()
+        return Transitions.instant.initialiseTranstion()
     }
 
     /*

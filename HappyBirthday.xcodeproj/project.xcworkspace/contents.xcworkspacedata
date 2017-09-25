@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:HappyBirthday.xcodeproj">
+      location = "group:/Users/josmange/Documents/dev/sandbox/birthdaycard/HappyBirthday/659681-200.png">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
