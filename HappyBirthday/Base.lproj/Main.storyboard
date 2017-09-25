@@ -110,7 +110,6 @@
                             <constraint firstItem="JlS-eo-ggu" firstAttribute="leading" secondItem="9Mu-eN-iae" secondAttribute="leading" constant="-84" id="U82-da-5HH"/>
                             <constraint firstItem="JlS-eo-ggu" firstAttribute="top" secondItem="zfF-Iu-sXb" secondAttribute="bottom" constant="169" id="fLd-Ik-5SQ"/>
                             <constraint firstItem="o3e-NV-QaK" firstAttribute="top" secondItem="zfF-Iu-sXb" secondAttribute="bottom" constant="207" id="qVf-nt-1ho"/>
-                            <constraint firstItem="lAP-pV-8pe" firstAttribute="top" secondItem="zfF-Iu-sXb" secondAttribute="bottom" constant="-20" id="tQA-sc-1md"/>
                             <constraint firstItem="JlS-eo-ggu" firstAttribute="centerY" secondItem="9Mu-eN-iae" secondAttribute="centerY" id="zY1-Ww-eGr"/>
                         </constraints>
                     </view>

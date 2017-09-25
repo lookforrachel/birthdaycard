@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     
     @IBAction func toNeonBtn(_ sender: Any) {
         audioPlayer.stop()
@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.transitioningDelegate = self
         do{
             let audioPath = Bundle.main.path(forResource: "Birds_01", ofType: "aif")
             try audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
@@ -36,6 +37,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return FadeAnimator()
+    }
 
 }
 

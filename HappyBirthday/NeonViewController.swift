@@ -9,7 +9,7 @@
 import UIKit
 import AVFoundation
 
-class NeonViewController: UIViewController {
+class NeonViewController: UIViewController, UIViewControllerTransitioningDelegate {
 
     @IBAction func toKitschBtn(_ sender: Any) {
                 audioPlayer.stop()
@@ -19,7 +19,7 @@ class NeonViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.transitioningDelegate = self
         // Do any additional setup after loading the view.
         do{
             let audioPath = Bundle.main.path(forResource: "Who Likes to Party", ofType: "mp3")
@@ -37,6 +37,9 @@ class NeonViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return FadeAnimator()
+    }
 
     /*
     // MARK: - Navigation

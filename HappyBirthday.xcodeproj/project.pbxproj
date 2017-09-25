@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DC480681F7947520091AADB /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC480671F7947520091AADB /* Animator.swift */; };
 		5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */; };
 		5D11EEDF1F77FE9100ADE81F /* HappyBirthdaay_K_HB.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */; };
 		5D11EEE01F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DC480671F7947520091AADB /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_CH.png; sourceTree = "<group>"; };
 		5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_HB.png; sourceTree = "<group>"; };
 		5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyBirthdaay_K__BG_F.jpg; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 			children = (
 				5D31711D1F7768F200596D4A /* AppDelegate.swift */,
 				5D31711F1F7768F200596D4A /* ViewController.swift */,
+				3DC480671F7947520091AADB /* Animator.swift */,
 				5D31713C1F7788FF00596D4A /* NeonViewController.swift */,
 				5D3171211F7768F200596D4A /* Main.storyboard */,
 				5D11EED61F77FE5300ADE81F /* Graphic Assets */,
@@ -154,7 +157,7 @@
 				TargetAttributes = {
 					5D3171191F7768F200596D4A = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = PK7RS8R8AP;
+						DevelopmentTeam = 3C42F7N9CQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DC480681F7947520091AADB /* Animator.swift in Sources */,
 				5D3171201F7768F200596D4A /* ViewController.swift in Sources */,
 				5D31713D1F7788FF00596D4A /* NeonViewController.swift in Sources */,
 				5D31711E1F7768F200596D4A /* AppDelegate.swift in Sources */,
@@ -335,10 +339,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PK7RS8R8AP;
+				DEVELOPMENT_TEAM = 3C42F7N9CQ;
 				INFOPLIST_FILE = HappyBirthday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lookforrachel.HappyBirthday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jossy.HappyBirthday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -348,10 +352,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = PK7RS8R8AP;
+				DEVELOPMENT_TEAM = 3C42F7N9CQ;
 				INFOPLIST_FILE = HappyBirthday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lookforrachel.HappyBirthday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jossy.HappyBirthday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
