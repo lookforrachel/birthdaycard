@@ -17,6 +17,8 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     }
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
 
+    private var swipeInteractor = InteractiveTopDownFadeTransition()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -29,12 +31,22 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         catch{
             print(error)
         }
-        audioPlayer.play()
+        //audioPlayer.play()
         
-        
+       
         
     }
 
+    override func awakeFromNib() {
+        //swipeInteractor = InteractiveTopDownFadeTransition()
+        swipeInteractor.wireToViewController(viewController: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepareing for segue in kitch")
+        
+    }
+    
     func beginArrowAnimation(){
        UIView.animateKeyframes(withDuration: 1.0, delay: 0.0, options: [.autoreverse,.repeat], animations: {
         
@@ -56,6 +68,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         beginArrowAnimation()
+         //swipeInteractor.wireToViewController(viewController: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,9 +76,28 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return Transitions.fade.initialiseTranstion()
     }
-
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return Transitions.fade.initialiseTranstion()
+    }
+//
+//    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+//        return swipeInteractor.interactionInProgress ? swipeInteractor : nil
+//    }
+    
+//    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+//        print("so this dismissal method was called")
+//        return swipeInteractor
+//    }
+    
+    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        print("so this presentation method was called - CK \(animator) \(swipeInteractor)")
+        return swipeInteractor.interactionInProgress ? swipeInteractor : nil
+    }
+    
+    
 }
 

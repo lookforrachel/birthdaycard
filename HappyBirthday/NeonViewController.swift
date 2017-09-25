@@ -14,7 +14,7 @@ class NeonViewController: UIViewController, UIViewControllerTransitioningDelegat
     @IBAction func toKitschBtn(_ sender: Any) {
                 audioPlayer.stop()
     }
-    
+    private var swipeInteractor = InteractiveTopDownFadeTransition()
     var audioPlayer:AVAudioPlayer = AVAudioPlayer()
 
     override func viewDidLoad() {
@@ -29,18 +29,44 @@ class NeonViewController: UIViewController, UIViewControllerTransitioningDelegat
         catch{
             print(error)
         }
-        audioPlayer.play()
+        
+        //audioPlayer.play()
     }
 
+    override func awakeFromNib() {
+        swipeInteractor = InteractiveTopDownFadeTransition()
+        swipeInteractor.wireToViewController(viewController: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("prepareing for segue in neon")
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return Transitions.instant.initialiseTranstion()
+//    func interactionControllerForDismissal(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+//        print("so this dismissal method was called")
+//        return swipeInteractor.interactionInProgress ? swipeInteractor : nil
+//    }
+//    
+    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        print("so this presentation method was called -neon \(animator) \(swipeInteractor)")
+        return swipeInteractor.interactionInProgress ? swipeInteractor : nil
     }
-
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return Transitions.fade.initialiseTranstion()
+    }
+//    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        return Transitions.fade.initialiseTranstion()
+//    }
     /*
     // MARK: - Navigation
 
