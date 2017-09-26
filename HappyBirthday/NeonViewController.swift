@@ -40,7 +40,7 @@ class NeonViewController: UIViewController, UIViewControllerTransitioningDelegat
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepareing for segue in neon")
-        
+        segue.destination.transitioningDelegate = self
     }
     
     override func viewDidAppear(_ animated: Bool) {

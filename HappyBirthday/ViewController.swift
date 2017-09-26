@@ -39,12 +39,13 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
 
     override func awakeFromNib() {
         //swipeInteractor = InteractiveTopDownFadeTransition()
+        
         swipeInteractor.wireToViewController(viewController: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepareing for segue in kitch")
-        
+        segue.destination.transitioningDelegate = self
     }
     
     func beginArrowAnimation(){
@@ -76,7 +77,6 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return Transitions.fade.initialiseTranstion()
     }

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D1361A71F796E200085AD6F /* 659681-200.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D1361A61F796E110085AD6F /* 659681-200.png */; };
 		3DC480681F7947520091AADB /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC480671F7947520091AADB /* Animator.swift */; };
+		57E122101F7B03E400703722 /* 659681-200.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E1220F1F7B03E400703722 /* 659681-200.png */; };
 		5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */; };
 		5D11EEDF1F77FE9100ADE81F /* HappyBirthdaay_K_HB.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */; };
 		5D11EEE01F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */; };
@@ -31,8 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D1361A61F796E110085AD6F /* 659681-200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "659681-200.png"; path = "/Users/josmange/Documents/dev/sandbox/birthdaycard/HappyBirthday/659681-200.png"; sourceTree = "<absolute>"; };
 		3DC480671F7947520091AADB /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		57E1220F1F7B03E400703722 /* 659681-200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "659681-200.png"; sourceTree = "<group>"; };
 		5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_CH.png; sourceTree = "<group>"; };
 		5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_HB.png; sourceTree = "<group>"; };
 		5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyBirthdaay_K__BG_F.jpg; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 		5D11EED61F77FE5300ADE81F /* Graphic Assets */ = {
 			isa = PBXGroup;
 			children = (
-				3D1361A61F796E110085AD6F /* 659681-200.png */,
+				57E1220F1F7B03E400703722 /* 659681-200.png */,
 				5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */,
 				5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */,
 				5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */,
@@ -201,7 +201,7 @@
 				5D3171311F77797100596D4A /* HappyBirthdaay_Kitsch.jpg in Resources */,
 				5D31713B1F77885600596D4A /* Who Likes to Party.mp3 in Resources */,
 				5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */,
-				3D1361A71F796E200085AD6F /* 659681-200.png in Resources */,
+				57E122101F7B03E400703722 /* 659681-200.png in Resources */,
 				5D11EEE11F77FE9100ADE81F /* HappyBirthdaay_N_CH.png in Resources */,
 				5D11EEE21F77FE9100ADE81F /* HappyBirthdaay_N_HB.jpg in Resources */,
 				5D3171351F777A7200596D4A /* HappyBirthdaay_K.jpg in Resources */,

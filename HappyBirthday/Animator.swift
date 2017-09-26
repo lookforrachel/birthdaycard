@@ -43,34 +43,54 @@ class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIViewContr
         return 1.0
     }
     
+//    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+//        let container = transitionContext.containerView
+//        let fromVC = transitionContext.viewController(forKey: .from)
+//        let toVC = transitionContext.viewController(forKey: .to)
+//
+//        let toView = toVC?.view
+//        let fromView = fromVC?.view
+//        toView?.layer.opacity=0
+//        fromView?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0);
+//        container.addSubview(toView!)
+//
+//        UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: {
+//            toView?.layer.opacity = 1
+//            fromView?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1);
+//        }, completion: {
+//            completed in
+//            let success = !transitionContext.transitionWasCancelled
+//
+//            if(success){
+//                fromView?.transform = CGAffineTransform.identity
+//                fromView!.removeFromSuperview()
+//                transitionContext.completeTransition(success)
+//            } else {
+//                print("and something went a bit wrong")
+//            }
+//
+//        })
+//
+//    }
+
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let container = transitionContext.containerView
-        let fromVC = transitionContext.viewController(forKey: .from)
-        let toVC = transitionContext.viewController(forKey: .to)
+        let inView   = transitionContext.containerView
+        let toView   = transitionContext.view(forKey: .to)!
+        let fromView = transitionContext.view(forKey: .from)!
         
-        let toView = toVC?.view
-        let fromView = fromVC?.view
-        toView?.layer.opacity=0
-        container.addSubview(toView!)
+        var frame = inView.bounds
         
-        UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: {
-            toView?.layer.opacity = 1
-            fromView?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1);
-        }, completion: {
-            completed in
-            let success = !transitionContext.transitionWasCancelled
+            frame.origin.y = -frame.size.height
+            toView.frame = frame
             
-            if(success){
-                fromView?.transform = CGAffineTransform.identity
-                fromView!.removeFromSuperview()
-                transitionContext.completeTransition(success)
-            } else {
-                print("and something went a bit wrong")
-            }
-            
-        })
-        
-    }
+            inView.addSubview(toView)
+            UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+                toView.frame = inView.bounds
+            }, completion: { finished in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+
+        }
     
     
     
@@ -116,6 +136,8 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
             vc = "kitchVC"
         }
         
+        //var target = storyboard.instantiateViewController(withIdentifier: vc)
+        
         print(segue)
         switch gestureRecognizer.state {
             
@@ -123,7 +145,7 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
             // 2
             interactionInProgress = true
             print("began")
-            //viewController.present(storyboard.instantiateViewController(withIdentifier: vc), animated: true, completion: nil)
+            //viewController.present(target, animated: true, completion: nil)
             viewController.performSegue(withIdentifier: segue, sender: self)
         case .changed:
             // 3
