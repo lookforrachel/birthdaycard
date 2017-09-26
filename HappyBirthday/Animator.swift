@@ -126,6 +126,8 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
         print("gesture", gestureRecognizer.state.rawValue,translation,progress, interactionInProgress)
         let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
         
+        let useSegue = false;
+        
         var segue = ""
         var vc = ""
         if viewController is ViewController{
@@ -136,7 +138,13 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
             vc = "kitchVC"
         }
         
-        //var target = storyboard.instantiateViewController(withIdentifier: vc)
+        
+        let target = storyboard.instantiateViewController(withIdentifier: vc) as UIViewController
+        
+        guard let delegate = viewController as? UIViewControllerTransitioningDelegate else {
+            fatalError()
+        }
+        
         
         print(segue)
         switch gestureRecognizer.state {
@@ -144,9 +152,15 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
         case .began:
             // 2
             interactionInProgress = true
-            print("began")
-            //viewController.present(target, animated: true, completion: nil)
-            viewController.performSegue(withIdentifier: segue, sender: self)
+            
+            if(useSegue){
+                viewController.performSegue(withIdentifier: segue, sender: self)
+            } else {
+                print("began", delegate)
+                target.transitioningDelegate = delegate
+                viewController.present(target, animated: true, completion: nil)
+            }
+
         case .changed:
             // 3
             print("changed, should complete \((progress > 0.5))")
