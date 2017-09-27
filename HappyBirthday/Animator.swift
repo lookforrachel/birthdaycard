@@ -33,7 +33,8 @@ class InstantTransition:FadeAnimator{
     
 }
 
-class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerInteractiveTransitioning {
+class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIViewControllerInteractiveTransitioning, CAAnimationDelegate {
+    
     func startInteractiveTransition(_ transitionContext: UIViewControllerContextTransitioning) {
         print("started")
     }
@@ -44,29 +45,46 @@ class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIViewContr
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+
         let container = transitionContext.containerView
         let fromVC = transitionContext.viewController(forKey: .from)
         let toVC = transitionContext.viewController(forKey: .to)
 
         let toView = toVC?.view
         let fromView = fromVC?.view
-        toView?.layer.opacity=0
-        //fromView?.transform = CGAffineTransform(scaleX: 1.0, y: 1.0);
+
+        toView?.layer.opacity = 0
+        //toView?.layer.bounds.origin.x = 10
+        let startframe = CGRect(x: 0, y: 0, width: container.frame.width, height: container.frame.height)
+        //let endframe = CGRect(x: 0, y: 0, width: container.frame.width, height: container.frame.height)
+        toView!.layer.frame = startframe
         container.addSubview(toView!)
+        print(startframe)
+        //toView?.transform = CGAffineTransform.
+
+        let debugview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+        debugview.backgroundColor = UIColor.red
+        container.addSubview(debugview)
+
 
         UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: {
-            toView?.layer.opacity = 1
-            //fromView?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1);
+            toView!.layer.opacity = 1
+            //toView!.frame = endframe
+            //toView?.transform = CGAffineTransform.identity
+
+            debugview.frame = CGRect(x: 0, y: 0, width: 10, height: container.frame.height)
+            debugview.backgroundColor = UIColor.green
+
         }, completion: { completed in
             let success = !transitionContext.transitionWasCancelled
             print("success:  \(success)")
-            
+            print(toView!.frame)
             transitionContext.completeTransition(success)
+            debugview.removeFromSuperview()
             
             if(success){
                 //fromView?.transform = CGAffineTransform.identity
-                //fromView!.removeFromSuperview()
-                
+                fromView!.removeFromSuperview()
             } else {
                 print("and something went a bit wrong")
             }
@@ -74,7 +92,78 @@ class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIViewContr
         })
 
     }
+    
+//    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+//        print("will attempt animation")
+//        let container = transitionContext.containerView
+//        let fromVC = transitionContext.viewController(forKey: .from)
+//        let toVC = transitionContext.viewController(forKey: .to)
+//
+//        let toView = toVC?.view
+//        let fromView = fromVC?.view
+//
+//        //toView?.layer.opacity = 0
+//        //toView?.layer.bounds.origin.x = 10
+//        let startframe = CGRect(x: 0, y: 0, width: container.frame.width, height: 0)
+//        let endframe = CGRect(x: 0, y: 0, width: container.frame.width, height: container.frame.height)
+//
+//        let maskLayer = CAShapeLayer()
+//        maskLayer.path =  UIBezierPath(rect: startframe).cgPath
+//        //maskLayer.fillColor = UIColor.black.cgColor
+//
+//        toView?.layer.mask = maskLayer
+//        container.addSubview(toView!)
+//
+////        let debugview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+////        debugview.backgroundColor = UIColor.red
+////        container.addSubview(debugview)
+//
+//        let startPath = maskLayer.path!
+//        let endPath = UIBezierPath(rect: endframe)
+//
+//        let anim = CABasicAnimation(keyPath: "path")
+//        anim.fromValue = startPath
+//        anim.toValue = endPath
+//        print(startPath,endPath)
+//        anim.duration = self.transitionDuration(using: transitionContext)
+//        anim.delegate = self
+//        maskLayer.add(anim, forKey: "path")
+//
+//        let oanimation = CABasicAnimation(keyPath: "opacity")
+//        oanimation.fromValue = 0.0
+//        oanimation.toValue = 1.0
+//        oanimation.duration = self.transitionDuration(using: transitionContext)
+//        maskLayer.add(oanimation, forKey: "opacity")
+//
+////        let moreanim = CABasicAnimation(keyPath: "frame.height")
+////        moreanim.fromValue = debugview.frame
+////        moreanim.toValue = CGRect(x: 0, y: 0, width: 10, height: container.frame.height)
+////        anim.duration = self.transitionDuration(using: transitionContext)
+////        debugview.layer.add(moreanim, forKey: "frame.height")
+//
+//        CATransaction.begin()
+//
+//        CATransaction.setCompletionBlock({
+//            print("complete basic animations")
+//            toView?.removeFromSuperview()
+//            fromView?.removeFromSuperview()
+//            maskLayer.path = endPath.cgPath
+//            transitionContext.completeTransition(true)
+//        })
+//        CATransaction.commit()
+//
+//
+//
+//    }
 
+    func animateLayer(layer:CALayer,animation:CABasicAnimation,_ block:(()->Void)? = nil){
+        animation.setValue(block, forKey: "block")
+        layer.add(animation, forKey: "path")
+        
+        //block?()
+    }
+    
+    
 //    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
 //        let inView   = transitionContext.containerView
 //        let toView   = transitionContext.view(forKey: .to)!
@@ -102,6 +191,11 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
     var interactionInProgress = false
     private var shouldCompleteTransition = false
     private weak var viewController: UIViewController!
+    private var useSegue = false;
+    override init() {
+        super.init()
+        useSegue = UserDefaults.standard.bool(forKey: "useSegue")
+    }
     
     func wireToViewController(viewController: UIViewController!) {
         self.viewController = viewController
@@ -126,10 +220,8 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
         let translation = gestureRecognizer.translation(in: gestureRecognizer.view!.superview!)
         var progress = (translation.y / (viewController.view.frame.height/2))
         progress = CGFloat(fminf(fmaxf(Float(progress), 0.0), 1.0))
-        print("gesture", gestureRecognizer.state.rawValue,translation,progress, interactionInProgress)
+        //print("gesture", gestureRecognizer.state.rawValue,translation,progress, interactionInProgress)
         let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
-        
-        let useSegue = false;
         
         var segue = ""
         var vc = ""
@@ -149,7 +241,7 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
         }
         
         
-        print(segue)
+        //print(segue,useSegue)
         switch gestureRecognizer.state {
             
         case .began:
@@ -159,20 +251,20 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
             if(useSegue){
                 viewController.performSegue(withIdentifier: segue, sender: self)
             } else {
-                print("began", delegate)
+                //print("began", delegate)
                 target.transitioningDelegate = delegate
                 viewController.present(target, animated: true, completion: nil)
             }
 
         case .changed:
             // 3
-            print("changed, should complete \((progress > 0.5))")
+            //print("changed, should complete \((progress > 0.5))")
             shouldCompleteTransition = progress > 0.5
             update(progress)
             
         case .cancelled:
             // 4
-            print("cancelled")
+            //print("cancelled")
             interactionInProgress = false
             cancel()
             
@@ -181,10 +273,10 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
             interactionInProgress = false
             
             if !shouldCompleteTransition {
-                print("ended Cancelled",interactionInProgress)
+                //print("ended Cancelled",interactionInProgress)
                 cancel()
             } else {
-                print("finished", interactionInProgress)
+                //print("finished", interactionInProgress)
                 finish()
             }
             

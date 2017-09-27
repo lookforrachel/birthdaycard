@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D47714A1F7BF5530047095F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D4771491F7BF5530047095F /* Settings.bundle */; };
 		3DC480681F7947520091AADB /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC480671F7947520091AADB /* Animator.swift */; };
 		57E122101F7B03E400703722 /* 659681-200.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E1220F1F7B03E400703722 /* 659681-200.png */; };
 		5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D4771491F7BF5530047095F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = HappyBirthday/Settings.bundle; sourceTree = "<group>"; };
 		3DC480671F7947520091AADB /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		57E1220F1F7B03E400703722 /* 659681-200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "659681-200.png"; sourceTree = "<group>"; };
 		5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_CH.png; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 		5D3171111F7768F200596D4A = {
 			isa = PBXGroup;
 			children = (
+				3D4771491F7BF5530047095F /* Settings.bundle */,
 				5D31711C1F7768F200596D4A /* HappyBirthday */,
 				5D31711B1F7768F200596D4A /* Products */,
 			);
@@ -204,6 +207,7 @@
 				57E122101F7B03E400703722 /* 659681-200.png in Resources */,
 				5D11EEE11F77FE9100ADE81F /* HappyBirthdaay_N_CH.png in Resources */,
 				5D11EEE21F77FE9100ADE81F /* HappyBirthdaay_N_HB.jpg in Resources */,
+				3D47714A1F7BF5530047095F /* Settings.bundle in Resources */,
 				5D3171351F777A7200596D4A /* HappyBirthdaay_K.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

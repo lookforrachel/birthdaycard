@@ -61,7 +61,7 @@ class NeonViewController: UIViewController, UIViewControllerTransitioningDelegat
 //    }
 //    
     func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        print("so this presentation method was called -neon \(animator) \(swipeInteractor)")
+        //print("so this presentation method was called -neon \(animator) \(swipeInteractor)")
         return swipeInteractor.interactionInProgress ? swipeInteractor : nil
     }
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
