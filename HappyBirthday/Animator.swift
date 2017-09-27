@@ -57,14 +57,16 @@ class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIViewContr
         UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: {
             toView?.layer.opacity = 1
             //fromView?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1);
-        }, completion: {
-            completed in
+        }, completion: { completed in
             let success = !transitionContext.transitionWasCancelled
-
+            print("success:  \(success)")
+            
+            transitionContext.completeTransition(success)
+            
             if(success){
-                fromView?.transform = CGAffineTransform.identity
-                fromView!.removeFromSuperview()
-                transitionContext.completeTransition(success)
+                //fromView?.transform = CGAffineTransform.identity
+                //fromView!.removeFromSuperview()
+                
             } else {
                 print("and something went a bit wrong")
             }
@@ -107,8 +109,9 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
     }
     
     private func prepareGestureRecognizerInView(view: UIView) {
-        let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleGesture))
-        gesture.edges = UIRectEdge.left
+        
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(handleGesture))
+        
         view.addGestureRecognizer(gesture)
     }
 
@@ -121,7 +124,7 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
         
         // 1
         let translation = gestureRecognizer.translation(in: gestureRecognizer.view!.superview!)
-        var progress = (translation.x / viewController.view.frame.width)
+        var progress = (translation.y / (viewController.view.frame.height/2))
         progress = CGFloat(fminf(fmaxf(Float(progress), 0.0), 1.0))
         print("gesture", gestureRecognizer.state.rawValue,translation,progress, interactionInProgress)
         let storyboard = UIStoryboard.init(name: "Main", bundle: Bundle.main)
