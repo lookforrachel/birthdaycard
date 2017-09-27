@@ -31,7 +31,7 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         catch{
             print(error)
         }
-        //audioPlayer.play()
+        
         
        
         
@@ -42,6 +42,8 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         
         swipeInteractor.wireToViewController(viewController: self)
     }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepareing for segue in kitch")
@@ -69,7 +71,12 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         beginArrowAnimation()
+        audioPlayer.play()
          //swipeInteractor.wireToViewController(viewController: self)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        audioPlayer.stop()
     }
     
     override func didReceiveMemoryWarning() {

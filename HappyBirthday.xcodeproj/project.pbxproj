@@ -160,7 +160,7 @@
 				TargetAttributes = {
 					5D3171191F7768F200596D4A = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = WCX6WW7JPG;
+						DevelopmentTeam = 3C42F7N9CQ;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -343,10 +343,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WCX6WW7JPG;
+				DEVELOPMENT_TEAM = 3C42F7N9CQ;
 				INFOPLIST_FILE = HappyBirthday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.langland.HappyBirthday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jossy.HappyBirthday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -356,10 +356,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = WCX6WW7JPG;
+				DEVELOPMENT_TEAM = 3C42F7N9CQ;
 				INFOPLIST_FILE = HappyBirthday/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.langland.HappyBirthday;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jossy.HappyBirthday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

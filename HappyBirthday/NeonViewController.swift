@@ -30,7 +30,7 @@ class NeonViewController: UIViewController, UIViewControllerTransitioningDelegat
             print(error)
         }
         
-        //audioPlayer.play()
+        
     }
 
     override func awakeFromNib() {
@@ -44,7 +44,10 @@ class NeonViewController: UIViewController, UIViewControllerTransitioningDelegat
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        audioPlayer.play()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        audioPlayer.stop()
     }
     
     override func didReceiveMemoryWarning() {
