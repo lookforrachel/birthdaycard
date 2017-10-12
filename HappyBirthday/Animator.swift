@@ -62,26 +62,32 @@ class FadeAnimator: NSObject, UIViewControllerAnimatedTransitioning, UIViewContr
         print(startframe)
         //toView?.transform = CGAffineTransform.
 
-        let debugview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
-        debugview.backgroundColor = UIColor.red
-        container.addSubview(debugview)
+        let debug = UserDefaults.standard.bool(forKey: "debug")
+        var debugview:UIView?
+        if (debug){
+            debugview = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: 0))
+            debugview!.backgroundColor = UIColor.red
+            container.addSubview(debugview!)
+        }
+
 
 
         UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: {
             toView!.layer.opacity = 1
             //toView!.frame = endframe
             //toView?.transform = CGAffineTransform.identity
-
-            debugview.frame = CGRect(x: 0, y: 0, width: 10, height: container.frame.height)
-            debugview.backgroundColor = UIColor.green
-
+            if let dview = debugview {
+            dview.frame = CGRect(x: 0, y: 0, width: 10, height: container.frame.height)
+            dview.backgroundColor = UIColor.green
+            }
         }, completion: { completed in
             let success = !transitionContext.transitionWasCancelled
             print("success:  \(success)")
             print(toView!.frame)
             transitionContext.completeTransition(success)
-            debugview.removeFromSuperview()
-            
+            if let dview = debugview {
+            dview.removeFromSuperview()
+            }
             if(success){
                 //fromView?.transform = CGAffineTransform.identity
                 fromView!.removeFromSuperview()
