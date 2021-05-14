@@ -220,7 +220,7 @@ class InteractiveTopDownFadeTransition: UIPercentDrivenInteractiveTransition {
 //
 //    }
     
-    func handleGesture(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
+  @objc func handleGesture(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
         
         // 1
         let translation = gestureRecognizer.translation(in: gestureRecognizer.view!.superview!)
