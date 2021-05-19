@@ -48,8 +48,6 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
         swipeInteractor.wireToViewController(viewController: self)
     }
     
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         print("prepareing for segue in kitch")
         segue.destination.transitioningDelegate = self
