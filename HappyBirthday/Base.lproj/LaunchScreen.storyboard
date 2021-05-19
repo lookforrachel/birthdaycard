@@ -22,12 +22,10 @@
                         <viewLayoutGuide key="safeArea" id="yoJ-lB-uvj"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="bW5-O1-2zQ" firstAttribute="leading" secondItem="yoJ-lB-uvj" secondAttribute="leading" id="MfF-4l-gUm"/>
-                            <constraint firstItem="bW5-O1-2zQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="QXy-XW-9Ql"/>
-                            <constraint firstAttribute="bottom" secondItem="bW5-O1-2zQ" secondAttribute="bottom" id="asg-NK-nvv"/>
-                            <constraint firstItem="yoJ-lB-uvj" firstAttribute="trailing" secondItem="bW5-O1-2zQ" secondAttribute="trailing" id="rXi-bC-Qi6"/>
-                            <constraint firstItem="bW5-O1-2zQ" firstAttribute="centerX" secondItem="yoJ-lB-uvj" secondAttribute="centerX" id="sdJ-ry-STY"/>
-                            <constraint firstItem="bW5-O1-2zQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ul4-pH-RBL"/>
+                            <constraint firstAttribute="bottom" secondItem="bW5-O1-2zQ" secondAttribute="bottom" id="3Gn-dT-DF6"/>
+                            <constraint firstItem="bW5-O1-2zQ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Gmv-cr-Rlx"/>
+                            <constraint firstItem="bW5-O1-2zQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="MLx-Oe-eeM"/>
+                            <constraint firstAttribute="trailing" secondItem="bW5-O1-2zQ" secondAttribute="trailing" id="ahI-Hm-IXM"/>
                         </constraints>
                     </view>
                 </viewController>
