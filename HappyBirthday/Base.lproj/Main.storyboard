@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Birds View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="kitchVC" id="BYZ-38-t0r" customClass="ViewController" customModule="HappyBirthday" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
+                <viewController storyboardIdentifier="kitchVC" id="BYZ-38-t0r" customClass="BirdsViewController" customModule="HappyBirthday" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBirthdaay_K_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ENa-xe-Aa5">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBirthdaay_K_HB.png" translatesAutoresizingMaskIntoConstraints="NO" id="s6a-u7-mfj">
-                                <rect key="frame" x="-84" y="189" width="542" height="289"/>
+                                <rect key="frame" x="-84" y="169" width="582" height="504"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EYA-Rn-GXS">
-                                <rect key="frame" x="168" y="345" width="38" height="53"/>
+                                <rect key="frame" x="188" y="432.5" width="38" height="53"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
                                 <state key="normal" title="🎂"/>
                                 <connections>
@@ -37,34 +31,35 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBirthdaay_K_CH.png" translatesAutoresizingMaskIntoConstraints="NO" id="Tfh-03-3Ez">
-                                <rect key="frame" x="-84" y="227" width="542" height="289"/>
+                                <rect key="frame" x="-84" y="207" width="582" height="450"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="659681-200.png" translatesAutoresizingMaskIntoConstraints="NO" id="oWN-ib-6TY">
-                                <rect key="frame" x="214" y="352" width="35" height="35"/>
+                                <rect key="frame" x="234" y="439.5" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="35" id="HUb-mr-dcR"/>
                                     <constraint firstAttribute="height" constant="35" id="XT9-qP-qVL"/>
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="kDt-ds-2kD"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Tfh-03-3Ez" secondAttribute="bottom" constant="151" id="418-Jp-WN9"/>
+                            <constraint firstItem="kDt-ds-2kD" firstAttribute="bottom" secondItem="Tfh-03-3Ez" secondAttribute="bottom" constant="151" id="418-Jp-WN9"/>
                             <constraint firstItem="Tfh-03-3Ez" firstAttribute="trailing" secondItem="s6a-u7-mfj" secondAttribute="trailing" id="5Na-Ee-UXM"/>
                             <constraint firstItem="EYA-Rn-GXS" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="38" id="7N5-xe-0Ka"/>
-                            <constraint firstItem="ENa-xe-Aa5" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="GHn-5x-jJg"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ENa-xe-Aa5" secondAttribute="bottom" id="GQX-bq-Z6w"/>
-                            <constraint firstItem="s6a-u7-mfj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="169" id="I3e-TE-7Bi"/>
-                            <constraint firstItem="ENa-xe-Aa5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Sfj-VS-Ap0"/>
+                            <constraint firstItem="ENa-xe-Aa5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="GHn-5x-jJg"/>
+                            <constraint firstAttribute="bottom" secondItem="ENa-xe-Aa5" secondAttribute="bottom" id="GQX-bq-Z6w"/>
+                            <constraint firstItem="s6a-u7-mfj" firstAttribute="top" secondItem="kDt-ds-2kD" secondAttribute="top" constant="169" id="I3e-TE-7Bi"/>
+                            <constraint firstItem="ENa-xe-Aa5" firstAttribute="leading" secondItem="kDt-ds-2kD" secondAttribute="leading" id="Sfj-VS-Ap0"/>
                             <constraint firstItem="s6a-u7-mfj" firstAttribute="centerY" secondItem="ENa-xe-Aa5" secondAttribute="centerY" id="T4Q-DX-0pT"/>
-                            <constraint firstAttribute="trailing" secondItem="ENa-xe-Aa5" secondAttribute="trailing" id="TUg-Bc-1gP"/>
-                            <constraint firstItem="s6a-u7-mfj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-84" id="Wap-FA-muc"/>
+                            <constraint firstItem="kDt-ds-2kD" firstAttribute="trailing" secondItem="ENa-xe-Aa5" secondAttribute="trailing" id="TUg-Bc-1gP"/>
+                            <constraint firstItem="s6a-u7-mfj" firstAttribute="leading" secondItem="kDt-ds-2kD" secondAttribute="leading" constant="-84" id="Wap-FA-muc"/>
                             <constraint firstItem="oWN-ib-6TY" firstAttribute="top" secondItem="EYA-Rn-GXS" secondAttribute="bottom" constant="-46" id="XJ4-53-GIK"/>
                             <constraint firstItem="oWN-ib-6TY" firstAttribute="leading" secondItem="EYA-Rn-GXS" secondAttribute="trailing" constant="8" id="ZKd-U7-c4V"/>
-                            <constraint firstItem="EYA-Rn-GXS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lWt-gt-o2m"/>
+                            <constraint firstItem="EYA-Rn-GXS" firstAttribute="centerX" secondItem="kDt-ds-2kD" secondAttribute="centerX" id="lWt-gt-o2m"/>
                             <constraint firstItem="Tfh-03-3Ez" firstAttribute="leading" secondItem="s6a-u7-mfj" secondAttribute="leading" id="qvZ-rP-gFU"/>
-                            <constraint firstItem="Tfh-03-3Ez" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="207" id="rHe-1r-cM2"/>
-                            <constraint firstItem="s6a-u7-mfj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rph-eL-PvU"/>
+                            <constraint firstItem="Tfh-03-3Ez" firstAttribute="top" secondItem="kDt-ds-2kD" secondAttribute="top" constant="207" id="rHe-1r-cM2"/>
+                            <constraint firstItem="s6a-u7-mfj" firstAttribute="centerX" secondItem="kDt-ds-2kD" secondAttribute="centerX" id="rph-eL-PvU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -79,22 +74,18 @@
         <scene sceneID="Png-bG-t44">
             <objects>
                 <viewController storyboardIdentifier="neonVC" id="K5T-DK-MPF" customClass="NeonViewController" customModule="HappyBirthday" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zfF-Iu-sXb"/>
-                        <viewControllerLayoutGuide type="bottom" id="3ze-f8-INg"/>
-                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9Mu-eN-iae">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBirthdaay_N_BG.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lAP-pV-8pe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBirthdaay_N_HB.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="JlS-eo-ggu">
-                                <rect key="frame" x="-84" y="189" width="543" height="289"/>
+                                <rect key="frame" x="-84" y="169" width="582" height="504"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAS-zv-IvD">
-                                <rect key="frame" x="168" y="345" width="38" height="53"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAS-zv-IvD">
+                                <rect key="frame" x="188" y="432.5" width="38" height="53"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="34"/>
                                 <state key="normal" title="🎂"/>
                                 <connections>
@@ -103,25 +94,27 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="HappyBirthdaay_N_CH.png" translatesAutoresizingMaskIntoConstraints="NO" id="o3e-NV-QaK">
-                                <rect key="frame" x="-84" y="227" width="543" height="289"/>
+                                <rect key="frame" x="-84" y="207" width="582" height="450"/>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="MCe-rv-rAO"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lAP-pV-8pe" firstAttribute="centerX" secondItem="9Mu-eN-iae" secondAttribute="centerX" id="3xC-G3-RcR"/>
-                            <constraint firstItem="lAP-pV-8pe" firstAttribute="leading" secondItem="9Mu-eN-iae" secondAttribute="leading" id="4wG-ds-paI"/>
-                            <constraint firstItem="3ze-f8-INg" firstAttribute="top" secondItem="o3e-NV-QaK" secondAttribute="bottom" constant="151" id="6iD-un-kws"/>
+                            <constraint firstItem="lAP-pV-8pe" firstAttribute="centerX" secondItem="MCe-rv-rAO" secondAttribute="centerX" id="3xC-G3-RcR"/>
+                            <constraint firstItem="lAP-pV-8pe" firstAttribute="leading" secondItem="MCe-rv-rAO" secondAttribute="leading" id="4wG-ds-paI"/>
+                            <constraint firstItem="MCe-rv-rAO" firstAttribute="bottom" secondItem="o3e-NV-QaK" secondAttribute="bottom" constant="151" id="6iD-un-kws"/>
                             <constraint firstItem="cAS-zv-IvD" firstAttribute="centerY" secondItem="9Mu-eN-iae" secondAttribute="centerY" constant="38" id="9hz-MV-0A1"/>
-                            <constraint firstAttribute="trailing" secondItem="o3e-NV-QaK" secondAttribute="trailing" constant="-84" id="K11-wn-Zwe"/>
-                            <constraint firstItem="cAS-zv-IvD" firstAttribute="centerX" secondItem="9Mu-eN-iae" secondAttribute="centerX" id="Nug-e7-39S"/>
-                            <constraint firstAttribute="trailing" secondItem="lAP-pV-8pe" secondAttribute="trailing" id="PKm-06-Jur"/>
+                            <constraint firstItem="MCe-rv-rAO" firstAttribute="trailing" secondItem="o3e-NV-QaK" secondAttribute="trailing" constant="-84" id="K11-wn-Zwe"/>
+                            <constraint firstItem="cAS-zv-IvD" firstAttribute="centerX" secondItem="MCe-rv-rAO" secondAttribute="centerX" id="Nug-e7-39S"/>
+                            <constraint firstItem="MCe-rv-rAO" firstAttribute="trailing" secondItem="lAP-pV-8pe" secondAttribute="trailing" id="PKm-06-Jur"/>
                             <constraint firstItem="lAP-pV-8pe" firstAttribute="centerY" secondItem="9Mu-eN-iae" secondAttribute="centerY" id="QvX-YJ-5mD"/>
-                            <constraint firstItem="3ze-f8-INg" firstAttribute="top" secondItem="lAP-pV-8pe" secondAttribute="bottom" id="SBi-cW-2iw"/>
-                            <constraint firstAttribute="trailing" secondItem="JlS-eo-ggu" secondAttribute="trailing" constant="-84" id="Suw-FT-7fx"/>
-                            <constraint firstItem="o3e-NV-QaK" firstAttribute="leading" secondItem="9Mu-eN-iae" secondAttribute="leading" constant="-84" id="TqY-QN-TiL"/>
-                            <constraint firstItem="JlS-eo-ggu" firstAttribute="leading" secondItem="9Mu-eN-iae" secondAttribute="leading" constant="-84" id="U82-da-5HH"/>
-                            <constraint firstItem="JlS-eo-ggu" firstAttribute="top" secondItem="zfF-Iu-sXb" secondAttribute="bottom" constant="169" id="fLd-Ik-5SQ"/>
-                            <constraint firstItem="o3e-NV-QaK" firstAttribute="top" secondItem="zfF-Iu-sXb" secondAttribute="bottom" constant="207" id="qVf-nt-1ho"/>
+                            <constraint firstAttribute="bottom" secondItem="lAP-pV-8pe" secondAttribute="bottom" id="SBi-cW-2iw"/>
+                            <constraint firstItem="MCe-rv-rAO" firstAttribute="trailing" secondItem="JlS-eo-ggu" secondAttribute="trailing" constant="-84" id="Suw-FT-7fx"/>
+                            <constraint firstItem="o3e-NV-QaK" firstAttribute="leading" secondItem="MCe-rv-rAO" secondAttribute="leading" constant="-84" id="TqY-QN-TiL"/>
+                            <constraint firstItem="JlS-eo-ggu" firstAttribute="leading" secondItem="MCe-rv-rAO" secondAttribute="leading" constant="-84" id="U82-da-5HH"/>
+                            <constraint firstItem="JlS-eo-ggu" firstAttribute="top" secondItem="MCe-rv-rAO" secondAttribute="top" constant="169" id="fLd-Ik-5SQ"/>
+                            <constraint firstItem="lAP-pV-8pe" firstAttribute="top" secondItem="9Mu-eN-iae" secondAttribute="top" id="pBk-1y-r9f"/>
+                            <constraint firstItem="o3e-NV-QaK" firstAttribute="top" secondItem="MCe-rv-rAO" secondAttribute="top" constant="207" id="qVf-nt-1ho"/>
                             <constraint firstItem="JlS-eo-ggu" firstAttribute="centerY" secondItem="9Mu-eN-iae" secondAttribute="centerY" id="zY1-Ww-eGr"/>
                         </constraints>
                     </view>

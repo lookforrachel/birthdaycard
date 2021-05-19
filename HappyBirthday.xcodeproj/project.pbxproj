@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		3D47714A1F7BF5530047095F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D4771491F7BF5530047095F /* Settings.bundle */; };
 		3DC480681F7947520091AADB /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC480671F7947520091AADB /* Animator.swift */; };
+		574B33F72655D26B0097710D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 574B33F62655D26B0097710D /* LaunchScreen.storyboard */; };
 		57E122101F7B03E400703722 /* 659681-200.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E1220F1F7B03E400703722 /* 659681-200.png */; };
+		57FF0F8F264F0F52008DEFF4 /* BirdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF0F8E264F0F52008DEFF4 /* BirdsViewController.swift */; };
+		57FF0F9126554084008DEFF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF0F9026554084008DEFF4 /* Constants.swift */; };
 		5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */; };
 		5D11EEDF1F77FE9100ADE81F /* HappyBirthdaay_K_HB.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */; };
 		5D11EEE01F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */; };
@@ -21,7 +24,6 @@
 		5D3171201F7768F200596D4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D31711F1F7768F200596D4A /* ViewController.swift */; };
 		5D3171231F7768F200596D4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3171211F7768F200596D4A /* Main.storyboard */; };
 		5D3171251F7768F200596D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3171241F7768F200596D4A /* Assets.xcassets */; };
-		5D3171281F7768F200596D4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3171261F7768F200596D4A /* LaunchScreen.storyboard */; };
 		5D3171311F77797100596D4A /* HappyBirthdaay_Kitsch.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D31712F1F77797100596D4A /* HappyBirthdaay_Kitsch.jpg */; };
 		5D3171321F77797100596D4A /* HappyBirthdaay_Neon2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D3171301F77797100596D4A /* HappyBirthdaay_Neon2.jpg */; };
 		5D3171351F777A7200596D4A /* HappyBirthdaay_K.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D3171331F777A7200596D4A /* HappyBirthdaay_K.jpg */; };
@@ -34,7 +36,10 @@
 /* Begin PBXFileReference section */
 		3D4771491F7BF5530047095F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = HappyBirthday/Settings.bundle; sourceTree = "<group>"; };
 		3DC480671F7947520091AADB /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		574B33F62655D26B0097710D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		57E1220F1F7B03E400703722 /* 659681-200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "659681-200.png"; sourceTree = "<group>"; };
+		57FF0F8E264F0F52008DEFF4 /* BirdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsViewController.swift; sourceTree = "<group>"; };
+		57FF0F9026554084008DEFF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_CH.png; sourceTree = "<group>"; };
 		5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_HB.png; sourceTree = "<group>"; };
 		5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyBirthdaay_K__BG_F.jpg; sourceTree = "<group>"; };
@@ -47,7 +52,6 @@
 		5D31711F1F7768F200596D4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5D3171221F7768F200596D4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5D3171241F7768F200596D4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5D3171271F7768F200596D4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5D3171291F7768F200596D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D31712F1F77797100596D4A /* HappyBirthdaay_Kitsch.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyBirthdaay_Kitsch.jpg; sourceTree = "<group>"; };
 		5D3171301F77797100596D4A /* HappyBirthdaay_Neon2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyBirthdaay_Neon2.jpg; sourceTree = "<group>"; };
@@ -109,14 +113,16 @@
 			isa = PBXGroup;
 			children = (
 				5D31711D1F7768F200596D4A /* AppDelegate.swift */,
+				57FF0F9026554084008DEFF4 /* Constants.swift */,
 				5D31711F1F7768F200596D4A /* ViewController.swift */,
 				3DC480671F7947520091AADB /* Animator.swift */,
+				57FF0F8E264F0F52008DEFF4 /* BirdsViewController.swift */,
 				5D31713C1F7788FF00596D4A /* NeonViewController.swift */,
 				5D3171211F7768F200596D4A /* Main.storyboard */,
+				574B33F62655D26B0097710D /* LaunchScreen.storyboard */,
 				5D11EED61F77FE5300ADE81F /* Graphic Assets */,
 				5D3171381F77822400596D4A /* Music */,
 				5D3171241F7768F200596D4A /* Assets.xcassets */,
-				5D3171261F7768F200596D4A /* LaunchScreen.storyboard */,
 				5D3171291F7768F200596D4A /* Info.plist */,
 			);
 			path = HappyBirthday;
@@ -192,7 +198,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D3171391F77834B00596D4A /* Birds_01.aif in Resources */,
-				5D3171281F7768F200596D4A /* LaunchScreen.storyboard in Resources */,
 				5D11EEE41F77FE9100ADE81F /* HappyBirthdaay_K_BG.jpg in Resources */,
 				5D3171361F777A7200596D4A /* HappyBirthdaay_N.jpg in Resources */,
 				5D3171251F7768F200596D4A /* Assets.xcassets in Resources */,
@@ -201,6 +206,7 @@
 				5D11EEE01F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg in Resources */,
 				5D11EEDF1F77FE9100ADE81F /* HappyBirthdaay_K_HB.png in Resources */,
 				5D3171231F7768F200596D4A /* Main.storyboard in Resources */,
+				574B33F72655D26B0097710D /* LaunchScreen.storyboard in Resources */,
 				5D3171311F77797100596D4A /* HappyBirthdaay_Kitsch.jpg in Resources */,
 				5D31713B1F77885600596D4A /* Who Likes to Party.mp3 in Resources */,
 				5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */,
@@ -219,10 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FF0F8F264F0F52008DEFF4 /* BirdsViewController.swift in Sources */,
 				3DC480681F7947520091AADB /* Animator.swift in Sources */,
 				5D3171201F7768F200596D4A /* ViewController.swift in Sources */,
 				5D31713D1F7788FF00596D4A /* NeonViewController.swift in Sources */,
 				5D31711E1F7768F200596D4A /* AppDelegate.swift in Sources */,
+				57FF0F9126554084008DEFF4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,14 +243,6 @@
 				5D3171221F7768F200596D4A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5D3171261F7768F200596D4A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5D3171271F7768F200596D4A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -298,7 +298,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -352,7 +352,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
