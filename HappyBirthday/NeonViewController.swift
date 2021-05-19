@@ -9,29 +9,20 @@
 import UIKit
 import AVFoundation
 
-class NeonViewController: UIViewController, UIViewControllerTransitioningDelegate {
+class NeonViewController: ViewController {
 
     @IBAction func toKitschBtn(_ sender: Any) {
-                audioPlayer.stop()
+                audioPlayer?.stop()
     }
+  
     private var swipeInteractor = InteractiveTopDownFadeTransition()
-    var audioPlayer:AVAudioPlayer = AVAudioPlayer()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.transitioningDelegate = self
-        // Do any additional setup after loading the view.
-        do{
-            let audioPath = Bundle.main.path(forResource: "Who Likes to Party", ofType: "mp3")
-            try audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
-        }
-            
-        catch{
-            print(error)
-        }
-        
-        
-    }
+  override func viewDidLoad() {
+    audioPath = Constants.party
+    super.viewDidLoad()
+    
+  }
+  
 
     override func awakeFromNib() {
         swipeInteractor = InteractiveTopDownFadeTransition()
@@ -43,12 +34,7 @@ class NeonViewController: UIViewController, UIViewControllerTransitioningDelegat
         segue.destination.transitioningDelegate = self
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        audioPlayer.play()
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        audioPlayer.stop()
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -60,13 +46,13 @@ class NeonViewController: UIViewController, UIViewControllerTransitioningDelegat
 //        return swipeInteractor.interactionInProgress ? swipeInteractor : nil
 //    }
 //    
-    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        //print("so this presentation method was called -neon \(animator) \(swipeInteractor)")
-        return swipeInteractor.interactionInProgress ? swipeInteractor : nil
-    }
-    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return Transitions.fade.initialiseTranstion()
-    }
+//    func interactionControllerForPresentation(using animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+//        //print("so this presentation method was called -neon \(animator) \(swipeInteractor)")
+//        return swipeInteractor.interactionInProgress ? swipeInteractor : nil
+//    }
+//    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+//        return Transitions.fade.initialiseTranstion()
+//    }
 //    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
 //        return Transitions.fade.initialiseTranstion()
 //    }

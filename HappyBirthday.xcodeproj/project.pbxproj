@@ -10,6 +10,8 @@
 		3D47714A1F7BF5530047095F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3D4771491F7BF5530047095F /* Settings.bundle */; };
 		3DC480681F7947520091AADB /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DC480671F7947520091AADB /* Animator.swift */; };
 		57E122101F7B03E400703722 /* 659681-200.png in Resources */ = {isa = PBXBuildFile; fileRef = 57E1220F1F7B03E400703722 /* 659681-200.png */; };
+		57FF0F8F264F0F52008DEFF4 /* BirdsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF0F8E264F0F52008DEFF4 /* BirdsViewController.swift */; };
+		57FF0F9126554084008DEFF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57FF0F9026554084008DEFF4 /* Constants.swift */; };
 		5D11EEDE1F77FE9100ADE81F /* HappyBirthdaay_K_CH.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */; };
 		5D11EEDF1F77FE9100ADE81F /* HappyBirthdaay_K_HB.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */; };
 		5D11EEE01F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */; };
@@ -35,6 +37,8 @@
 		3D4771491F7BF5530047095F /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = HappyBirthday/Settings.bundle; sourceTree = "<group>"; };
 		3DC480671F7947520091AADB /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
 		57E1220F1F7B03E400703722 /* 659681-200.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "659681-200.png"; sourceTree = "<group>"; };
+		57FF0F8E264F0F52008DEFF4 /* BirdsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsViewController.swift; sourceTree = "<group>"; };
+		57FF0F9026554084008DEFF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5D11EED71F77FE9100ADE81F /* HappyBirthdaay_K_CH.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_CH.png; sourceTree = "<group>"; };
 		5D11EED81F77FE9100ADE81F /* HappyBirthdaay_K_HB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HappyBirthdaay_K_HB.png; sourceTree = "<group>"; };
 		5D11EED91F77FE9100ADE81F /* HappyBirthdaay_K__BG_F.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = HappyBirthdaay_K__BG_F.jpg; sourceTree = "<group>"; };
@@ -109,8 +113,10 @@
 			isa = PBXGroup;
 			children = (
 				5D31711D1F7768F200596D4A /* AppDelegate.swift */,
+				57FF0F9026554084008DEFF4 /* Constants.swift */,
 				5D31711F1F7768F200596D4A /* ViewController.swift */,
 				3DC480671F7947520091AADB /* Animator.swift */,
+				57FF0F8E264F0F52008DEFF4 /* BirdsViewController.swift */,
 				5D31713C1F7788FF00596D4A /* NeonViewController.swift */,
 				5D3171211F7768F200596D4A /* Main.storyboard */,
 				5D11EED61F77FE5300ADE81F /* Graphic Assets */,
@@ -219,10 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57FF0F8F264F0F52008DEFF4 /* BirdsViewController.swift in Sources */,
 				3DC480681F7947520091AADB /* Animator.swift in Sources */,
 				5D3171201F7768F200596D4A /* ViewController.swift in Sources */,
 				5D31713D1F7788FF00596D4A /* NeonViewController.swift in Sources */,
 				5D31711E1F7768F200596D4A /* AppDelegate.swift in Sources */,
+				57FF0F9126554084008DEFF4 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

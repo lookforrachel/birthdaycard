@@ -12,28 +12,33 @@ import AVFoundation
 class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var arrow: UIImageView!
+  
     @IBAction func toNeonBtn(_ sender: Any) {
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
-    var audioPlayer:AVAudioPlayer = AVAudioPlayer()
+  
+  open var audioPath: AudioPath? = nil
+  
+  weak var audioPlayer: AVAudioPlayer?
 
     private var swipeInteractor = InteractiveTopDownFadeTransition()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+      do{
+        if let audioPath = self.audioPath, let url = audioPath.url {
+          AppDelegate.player = try AVAudioPlayer(contentsOf: url)
+          audioPlayer = AppDelegate.player
+        }
+      }
+
+      catch{
+          print(error)
+      }
+      
         // Do any additional setup after loading the view, typically from a nib.
         self.transitioningDelegate = self
-        do{
-            let audioPath = Bundle.main.path(forResource: "Birds_01", ofType: "aif")
-            try audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
-        }
-
-        catch{
-            print(error)
-        }
-        
-        
-       
         
     }
 
@@ -54,29 +59,33 @@ class ViewController: UIViewController,UIViewControllerTransitioningDelegate {
        UIView.animateKeyframes(withDuration: 1.0, delay: 0.0, options: [.autoreverse,.repeat], animations: {
         
             UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 1.0, animations: {
-                self.arrow.layer.frame.origin.x+=10.0
+                self.arrow?.layer.frame.origin.x+=10.0
             })
         
        }, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
-        let image = arrow.image?.withRenderingMode(.alwaysTemplate)
-        arrow.image = image
-        arrow.tintColor = UIColor.init(red: 236/255, green: 0/255, blue: 140/255, alpha: 1.0)
+      
+      if self is BirdsViewController {
+        let image = arrow?.image?.withRenderingMode(.alwaysTemplate)
+        arrow?.image = image
+        arrow?.tintColor = UIColor.init(red: 236/255, green: 0/255, blue: 140/255, alpha: 1.0)
         
-        
+      }
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
+      if self is BirdsViewController {
         beginArrowAnimation()
-        audioPlayer.play()
+      }
+        audioPlayer?.play()
          //swipeInteractor.wireToViewController(viewController: self)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
-        audioPlayer.stop()
+        audioPlayer?.stop()
     }
     
     override func didReceiveMemoryWarning() {
